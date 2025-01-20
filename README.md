@@ -36,8 +36,29 @@ Make sure you have the following installed:
 1. **Clone the Repository**:
    Open your terminal and run the following command to clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/blue-black-team-website.git
+   git clone https://github.com/Shreyansh2025/Project2.git
 2. **Open the Project: Navigate to the project directory:**
    ```bash
    cd blue-black-team-website
 3. **View in Browser: Open the index.html file in your preferred web browser to see the website in action.**
+
+   ## Contributing
+We welcome contributions! Here’s how you can help:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to your branch (`git push origin feature-branch`).
+6. Open a Pull Request to merge your changes into the main branch.
+
+## Usage
+- Open the `index.html` file in any modern web browser to view the homepage.
+- The page is fully responsive and will adjust to various screen sizes.
+- Scroll through the sections to learn more about the team, projects, and other details.
+
+## Contact
+For any inquiries or collaboration opportunities, feel free to reach out:
+- Email: [shreyanshsurana100@gmail.com](mailto:shreyanshsurana100@gmail.com)
+
+Thank you for visiting the Blue Black Team website!
+
