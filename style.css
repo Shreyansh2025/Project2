@@ -1,79 +1,29 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
   }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  #home {
-    background-image: url("https://c4.wallpaperflare.com/wallpaper/307/249/129/abstract-black-blue-texture-wallpaper-preview.jpg"),
-      url("https://img.freepik.com/premium-photo/gradient-elegant-navy-abstract-creative-background-design_851755-310017.jpg");
-    background-repeat: no-repeat;
-    background-position: right, left;
-    position: relative;
-    height: 100vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    overflow: hidden;
-  }
-  
-  #home h1 {
-    animation: fadeIn 2s ease-out;
-  
-    font-size: 3.5rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    line-height: 1.2;
-    animation: fadeIn 2s ease-out;
-  }
-  
-  #home p {
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin: 20px auto;
-    opacity: 0.9;
-    font-family: "Arial", sans-serif;
-  }
-  #home a {
-    font-size: 1.2rem;
-    padding: 10px 30px;
-    border-radius: 25px;
-    background-color: #00aaff;
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
-  }
-  .btn:hover {
-    background-color: #0088cc;
-    color: #fff;
-  }
-  section {
-    border: 2px solid #007bff;
-    border-radius: 10px;
-    padding: 3em;
-    margin: 2em;
-    background-color: #000000;
-    color: #fff;
-  }
-  
-  /* Underline animation for links */
-  .navbar-nav .nav-link {
+/* Navbar Links */
+.navbar-nav .nav-link {
     position: relative;
     display: inline-block;
     padding-bottom: 5px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
   }
   
   .navbar-nav .nav-link:after {
@@ -88,9 +38,11 @@ body {
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
+  
   .navbar-nav .nav-link:hover {
-    color: white;
+    color: #ffc107; /* Highlight color on hover */
   }
+  
   .navbar-nav .nav-link:hover:after {
     transform: scaleX(0.75);
     transform-origin: bottom left;
@@ -102,6 +54,134 @@ body {
     transform-origin: bottom left;
   }
   
+  .navbar-nav .nav-link:focus {
+    outline: none;
+    border-bottom: 2px solid #ffc107; /* Add a yellow underline on focus */
+  }
+  
+  /* Navbar Brand Image */
+  .navbar-brand img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-brand img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  /* Responsive Navbar */
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  @media (max-width: 992px) {
+    .navbar-collapse {
+      background-color: #0d6efd; /* Match navbar background for a cohesive look */
+      padding: 1rem;
+    }
+  
+    .navbar-nav {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .navbar-nav .nav-item {
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  #home {
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+      url("https://c4.wallpaperflare.com/wallpaper/307/249/129/abstract-black-blue-texture-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-position: right top, left bottom;
+    background-size: cover, cover;
+    position: relative;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  #home h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #home p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 20px auto;
+    opacity: 0.9;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .home-content .btn {
+    background-color: #fff;
+    color: #007bff;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+#home a:hover {
+    background: linear-gradient(90deg, #007bff, #00aaff);
+    transform: translateY(-3px);
+    transform: scale(1.1);
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    #home h1 {
+      font-size: 2.5rem;
+    }
+    #home p {
+      font-size: 1rem;
+    }
+    #home a {
+      font-size: 1rem;
+      padding: 8px 20px;
+    }
+  }
+  
+  section {
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 3em;
+    margin: 2em;
+    background-color: #000000;
+    color: #fff;
+  }
+  
+
   /* Hero Section */
   #hero {
       background-image: url('https://media.licdn.com/dms/image/v2/D5612AQEOkAR-SvMfdA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1677587239512?e=2147483647&v=beta&t=HLOFMKyX7I0wffG6IM_kY6mOoS-DkoFqZwA0wvA2tEs');
