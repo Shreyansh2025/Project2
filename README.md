@@ -42,7 +42,7 @@ Make sure you have the following installed:
    cd blue-black-team-website
 3. **View in Browser: Open the index.html file in your preferred web browser to see the website in action.**
 
-   ## Contributing
+## Contributing
 We welcome contributions! Here’s how you can help:
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature-branch`).
