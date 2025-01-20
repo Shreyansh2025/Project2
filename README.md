@@ -39,7 +39,7 @@ Make sure you have the following installed:
    git clone https://github.com/Shreyansh2025/Project2.git
 2. **Open the Project: Navigate to the project directory:**
    ```bash
-   cd blue-black-team-website
+   cd Project2
 3. **View in Browser: Open the index.html file in your preferred web browser to see the website in action.**
 
 ## Contributing
